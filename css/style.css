@@ -1,0 +1,56 @@
+h1{
+  text-align: center;
+}
+
+h2{
+  font-size: 20px
+}
+
+.play{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.cuadro {
+  background: black;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background: radial-gradient(circle at 100px 100px, white, #000);
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bingo {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carton {
+  background: white;
+  width: 350px;
+  text-align: center;
+  font-size: 30px;
+ background-color: rgb(255, 195, 0 , 22%); 
+  border-width: 5px;
+}
+
+.number{
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  width: 50px;
+  margin: 6px;
+}
+
+.tachado{
+  text-decoration:line-through;
+  color: tomato;
+}
