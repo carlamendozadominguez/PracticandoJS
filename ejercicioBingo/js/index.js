@@ -9,9 +9,8 @@ generarBolas = () =>{
   return bolas;
 }
 
- get_bolaEscogida => (){
-  var bolaEscogida = cogerBola(bolas);
-  return bolaEscogida;
+ get_bolaEscogida= () => {
+  return cogerBola(bolas);
 }
 
 var boton = document.querySelector('.boton');
@@ -31,14 +30,13 @@ boton.onclick = jugar =>{
 tachar = (cartonJugador, bolaEscogida, jugador) => {
   let index = cartonJugador.findIndex(k => k == bolaEscogida);
   if( index != -1){
-    //_.pull(cartonJugador,bolaEscogida);
     cartonJugador[index] = -1;
     let clase = document.querySelector(`.carton.${jugador} .number.number${bolaEscogida}`);
     clase.classList.add("tachado");   
   }
 }
 
-crearCarton = jugador => {
+crearCarton = jugador =>{
  let parent = document.querySelector(`.carton.${jugador}`);
  let numerosCarton = generarBolas();
  numerosCarton = numerosCarton.slice(0,15);
@@ -51,8 +49,7 @@ crearCarton = jugador => {
   return numerosCarton;
 }
 
-
-comprobarGanador => (){
+comprobarGanador = () =>{
   if(comprobarElementosTachados(cartonPlayer) && comprobarElementosTachados(cartonMachine)){
     swal('Empate');
     boton.remove();
@@ -67,7 +64,7 @@ comprobarGanador => (){
   }    
 }
 
-comprobarElementosTachados => array{
+comprobarElementosTachados = array =>{
   let count = 0;
   array.forEach(valor => {
     if(valor == -1)
@@ -80,7 +77,7 @@ comprobarElementosTachados => array{
   return false;
 }
 
-separarLineas => array {
+separarLineas = array =>{
   for(let i = 0; i < 15; i=i+5){
     let comprobacion = comprobarElementosTachados(array.slice(i,i+5));
     if(comprobacion){
@@ -91,7 +88,7 @@ separarLineas => array {
   return false;
 }
 
-cantarLinea => (){
+cantarLinea = () => {
   if(separarLineas(cartonPlayer) == true){
       swal('El jugador ha hecho linea');
       return true;

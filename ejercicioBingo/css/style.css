@@ -1,4 +1,10 @@
-h1{
+body{
+  background: black;
+}
+h1{ 
+  font-size: 135px;
+  text-shadow: 0 -10px 0 yellow, -10px 0  0 cyan, 10px 10px  0 pink;
+  color: #1c1c1c;
   text-align: center;
 }
 
@@ -14,11 +20,11 @@ h2{
 
 
 .cuadro {
-  background: black;
   border-radius: 50%;
   height: 150px;
   width: 150px;
   margin: 10px;
+  margin-bottom: 40px;
   background: radial-gradient(circle at 100px 100px, white, #000);
   font-size: 80px;
   display: flex;
@@ -38,7 +44,6 @@ h2{
   width: 350px;
   text-align: center;
   font-size: 30px;
- background-color: rgb(255, 195, 0 , 22%); 
   border-width: 5px;
 }
 
